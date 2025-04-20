@@ -1,0 +1,80 @@
+💸 Finance Management System
+A Java Swing desktop application to manage personal expenses, analyze spending habits, and receive intelligent suggestions using a Flask-based API.
+
+📌 Features
+🔐 User Authentication (Register & Login)
+
+📊 Expense Dashboard
+
+➕ Add and Track Expenses
+
+📈 Analyze Spending Patterns
+
+🤖 AI-Powered Suggestions via Flask API
+
+🧩 Modular Code (Java for UI & Logic, Python for AI)
+
+🗂️ Tech Stack
+Frontend & UI: Java Swing
+
+Backend: Java (Core Logic)
+
+API & Suggestions: Python (Flask)
+
+Build Tool: Maven
+
+🧭 Workflow Overview
+mermaid
+Copy
+Edit
+graph TD
+    A[User] -->|Has Account| B(Login)
+    A -->|New User| C(Register)
+    B --> D(Dashboard)
+    C -->|Success| B
+    D --> E(Add Expenses)
+    D --> F(Analysis)
+    F -->|Suggestions| G[Flask API]
+    C --> G
+🚀 Getting Started
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/aryanbha123/Finance-Managmet.git
+cd Finance-Managmet
+2. Run the Java App
+bash
+Copy
+Edit
+cd src/
+# Compile and run the main app
+javac main/java/com/aryan/myapp/App.java
+java main/java/com/aryan/myapp/App
+Make sure you have JDK installed.
+
+3. Run Flask API (for suggestions)
+bash
+Copy
+Edit
+cd api/
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python api.py
+📁 Project Structure
+bash
+Copy
+Edit
+├── api/                 # Flask API for smart suggestions
+├── src/                 # Java source files
+│   └── main/java/com/aryan/myapp/
+│       ├── DB/          # Database connections
+│       ├── model/       # Data models
+│       ├── Ui/          # Swing UI files
+│       └── App.java     # Main entry point
+├── target/              # Compiled files (ignored in git)
+├── .gitignore
+└── pom.xml              # Maven build config
+📌 Note
+Make sure to run the Flask API before triggering the Analysis section in the Java app to receive suggestions.
